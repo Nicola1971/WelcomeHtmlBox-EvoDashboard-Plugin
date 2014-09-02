@@ -3,6 +3,9 @@ WelcomeHtmlBox-OMWC-Plugin 2.1
 
 Dashboard html box widget plugin for OnManagerWelcomeCustom
 
+With this plugin you can add any kink of html content inside your Modx Evolution Dashboard.
+The plugin now includes a default css style for basic typografy 
+
 ###Configuration:
 
 * Html Box placement: OnManagerWelcomeHome or OnManagerWelcomeRender
