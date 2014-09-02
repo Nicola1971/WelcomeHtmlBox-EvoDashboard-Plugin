@@ -3,7 +3,9 @@
  *
  * WelcomeHtmlBox chunk example
  *
+ * @author    Nicola Lambathakis http://www.tattoocms.it/
  * @category	chunk
+ * @version    2.1 RC  
  * @internal @modx_category Welcome
  */
 <!--horiz separator-->
