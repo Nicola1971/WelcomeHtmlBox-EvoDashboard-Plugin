@@ -1,4 +1,4 @@
-WelcomeHtmlBox-OMWC-Plugin 2.1
+WelcomeHtmlBox EvoDashboard Plugin 2.1
 ==========================
 
 Dashboard html box widget plugin for for EvoDashboard and OnManagerWelcomeCustom
