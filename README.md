@@ -24,7 +24,7 @@ The plugin now includes a default css style for basic typografy
 requires: OnManagerWelcomeCustom Plugin https://github.com/Nicola1971/OnManagerWelcomeCustom-plugin
 
 ##Dashboard html box widget
-![html box widget](https://raw.githubusercontent.com/Nicola1971/WelcomeHtmlBox-OMWC-Plugin/master/htmlbox.jpg)
+![html box widget](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/htmlbox/htmlbox.jpg)
 
 # Updates
 
