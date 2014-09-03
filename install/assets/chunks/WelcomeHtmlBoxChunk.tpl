@@ -6,7 +6,7 @@
  * @author    Nicola Lambathakis http://www.tattoocms.it/
  * @category	chunk
  * @version    2.1 RC
- * @internal @modx_category Welcome
+ * @internal @modx_category Dashboard
  */
 <div class="padding10">
 <h2>Hello this is my html box widget</h2>
