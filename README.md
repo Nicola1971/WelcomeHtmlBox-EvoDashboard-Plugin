@@ -1,4 +1,4 @@
-WelcomeHtmlBox EvoDashboard Plugin 2.1
+WelcomeHtmlBox EvoDashboard Plugin 2.3
 ==========================
 
 Dashboard html box widget plugin for for EvoDashboard and OnManagerWelcomeCustom
@@ -13,6 +13,9 @@ http://www.tattoocms.it/extras/plugins/welcomehtmlbox-dashboard-widget.html
 ![html box widget](https://raw.githubusercontent.com/Nicola1971/training-materials/master/Images/htmlbox/htmlbox.jpg)
 
 # Updates
+## RC2.3
+
+* Refactor for Dashboard 2.0 - boostrap based
 
 ## RC2.1
 
