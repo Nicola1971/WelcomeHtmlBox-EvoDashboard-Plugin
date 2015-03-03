@@ -21,49 +21,4 @@
 
 </ul>
 
-
-<h3>Tables</h3>
-<table class="table table-striped">
-<tr>
-<th>Tag</th>
-<th>Description</th>
-</tr>
-
-<tr>
-<td>[[snippet]]</td>
-<td>for caching snippets. Inserts the output of a snippet named 'snippet' into your page</td>
-</tr>
-
-<tr>
-<td>[!snippet!]</td>
-<td>for non-caching snippets. Inserts the output of a snippet named 'snippet' into your page.</td>
-</tr>
-
-<tr>
-<td>[(setting)]</td>
-<td>Inserts the value of a site-wide setting named 'setting' into your page.</td>
-</tr>
-
-<tr>
-<td>[*resourceField/TV*]</td>
-<td>Inserts various blocks of content specific to the page being displayed.</td>
-</tr>
-
-<tr>
-<td>[^timing^]</td>
-<td>Shows how long it took to create the current page.</td>
-</tr>
-
-<tr>
-<td>[~link~]</td>
-<td>Makes a link to another document in your MODx site.</td>
-</tr>
-
-<tr>
-<td>
-{{chunk}}</td>
-<td>Inserts a chunk of HTML into your page.</td>
-</tr>
-
-</table>
 </div>
