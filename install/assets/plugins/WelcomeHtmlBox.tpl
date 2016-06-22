@@ -6,22 +6,21 @@
  *
  * @author    Nicola Lambathakis http://www.tattoocms.it/
  * @category    plugin
- * @version    2.3 RC
+ * @version    3.0 RC
  * @license	 http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
- * @internal    @events OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerMainFrameHeaderHTMLBlock
+ * @internal    @events OnManagerWelcomeHome,OnManagerMainFrameHeaderHTMLBlock
  * @internal    @installset base
  * @internal    @modx_category Dashboard
  * @internal    @properties  OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerMainFrameHeaderHTMLBlock
- * @internal    @properties  &HtmlBoxEvoEvent= Html Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &HtmlBoxSize= Html Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &HtmlBoxTitle= Box Title:;string;Html Box Widget &AwesomeFontsIcon= Box Title icon:;string;fa-star &HtmlBoxChunk= Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles= Load typography styles:;list;yes,no;no &StylesUrl= css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css
+ * @internal    @properties  &WidgetTitle=Widget Title:;string;Html Widget &AwesomeFontsIcon=Widget Title icon:;string;fa-star &WidgetChunk=Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles=Load typography styles:;list;yes,no;no &StylesUrl=css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css &datarow=widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol=widget col position:;list;1,2,3,4;1 &datasizex=widget x size:;list;1,2,3,4;4 &datasizey=widget y size:;list;1,2,3,4,5,6,7,8,9,10;2
  */
 
 /**
- * WelcomeHtmlBox RC 2.3
+ * WelcomeHtmlBox RC 3.0
  * author Nicola Lambathakis http://www.tattoocms.it/
  *
  * Dashboard html box widget plugin for EvoDashboard
- * Event: OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerMainFrameHeaderHTMLBlock
-&HtmlBoxEvoEvent= Html Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &HtmlBoxSize= Html Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &HtmlBoxTitle= Box Title:;string;Html Box Widget &AwesomeFontsIcon= Box Title icon:;string;fa-star &HtmlBoxChunk= Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles= Load typography styles:;list;yes,no;no &StylesUrl= css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css
+ * Event: &WidgetTitle=Widget Title:;string;Html Widget &AwesomeFontsIcon=Widget Title icon:;string;fa-star &WidgetChunk=Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles=Load typography styles:;list;yes,no;no &StylesUrl=css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css &datarow=widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol=widget col position:;list;1,2,3,4;1 &datasizex=widget x size:;list;1,2,3,4;4 &datasizey=widget y size:;list;1,2,3,4,5,6,7,8,9,10;2
 ****
 */
 // Run the main code

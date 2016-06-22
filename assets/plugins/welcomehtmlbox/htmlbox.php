@@ -4,25 +4,26 @@
  * author Nicola Lambathakis http://www.tattoocms.it/
  *
  * Dashboard html box widget plugin for EvoDashboard
- * Event: OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender,OnManagerMainFrameHeaderHTMLBlock
-&HtmlBoxEvoEvent= Html Box placement:;list;OnManagerWelcomePrerender,OnManagerWelcomeHome,OnManagerWelcomeRender;OnManagerWelcomeRender &HtmlBoxSize= Html Box size:;list;dashboard-block-full,dashboard-block-half;dashboard-block-half &HtmlBoxTitle= Box Title:;string;Html Box Widget &AwesomeFontsIcon= Box Title icon:;string;fa-star &HtmlBoxChunk= Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles= Load typography styles:;list;yes,no;yes &StylesUrl= css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css
+ * Event: OnManagerWelcomeHome,OnManagerMainFrameHeaderHTMLBlock
+&WidgetTitle= Widget Title:;string;Html Widget &AwesomeFontsIcon= Widget Title icon:;string;fa-star &WidgetChunk= Html Chunk:;string;WelcomeHtmlBoxChunk &LoadStyles= Load typography styles:;list;yes,no;no &StylesUrl= css file path:;string;../assets/plugins/welcomehtmlbox/welcomehtmlbox.css &datarow= widget row position:;list;1,2,3,4,5,6,7,8,9,10;1 &datacol= widget col position:;list;1,2,3,4;1 &datasizex= widget x size:;list;1,2,3,4;4 &datasizey= widget y size:;list;1,2,3,4,5,6,7,8,9,10;2
 ****
 */
-//chunk
-$HtmlBoxChunk = isset($HtmlBoxChunk) ? $HtmlBoxChunk : 'WelcomeHtmlBoxChunk';
+//widget name
+$WidgetID = isset($WidgetID) ? $WidgetID : 'HtmlBox';
+// size and position
+$datarow = isset($datarow) ? $datarow : '1';
+$datacol = isset($datacol) ? $datacol : '2';
+$datasizex = isset($datasizex) ? $datasizex : '2';
+$datasizey = isset($datasizey) ? $datasizey : '2';
+//output
+$WidgetOutput = isset($WidgetOutput) ? $WidgetOutput : '';
 //events
-$HtmlBoxEvoEvent = isset($HtmlBoxEvoEvent) ? $HtmlBoxEvoEvent : 'OnManagerWelcomeRender';
+$EvoEvent = isset($EvoEvent) ? $EvoEvent : 'OnManagerWelcomeHome';
 //styles
 $StylesUrl = isset($StylesUrl) ? $StylesUrl : '../assets/plugins/welcomehtmlbox/welcomehtmlbox.css';
-// box size
+// box icon
 $AwesomeFontsIcon = isset($AwesomeFontsIcon) ? $AwesomeFontsIcon : 'fa-list-alt';
-$HtmlBoxSize = isset($HtmlBoxSize) ? $HtmlBoxSize : 'dashboard-block-full';
-//widget grid size
-if ($HtmlBoxSize == 'dashboard-block-full') {
-$HtmlBoxWidth = 'col-sm-12';
-} else {
-$HtmlBoxWidth = 'col-sm-6';
-}
+
 $output = "";
 $e = &$modx->Event;
 
@@ -35,13 +36,28 @@ if($e->name == 'OnManagerMainFrameHeaderHTMLBlock') {
 $cssOutput = '<link type="text/css" rel="stylesheet" href="'.$StylesUrl.'">';
 }
 }
-/*chunk box*/
-if($e->name == ''.$HtmlBoxEvoEvent.'') {
-$HtmlOutput = '<div class="'.$HtmlBoxWidth.'"><div class="widget-wrapper"> <div class="widget-title sectionHeader"><i class="fa '.$AwesomeFontsIcon.'"></i> '.$HtmlBoxTitle.'</div>
-<div id="idShowHideSocialBox" class="sectionBody">'.$modx->getChunk(''.$HtmlBoxChunk.'').' <br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div></div>';
+/*Widget Box */
+if($e->name == ''.$EvoEvent.'') {
+$WidgetOutput = '
+<li id="'.$WidgetID.'" data-row="'.$datarow.'" data-col="'.$datacol.'" data-sizex="'.$datasizex.'" data-sizey="'.$datasizey.'">
+                    <div class="panel panel-default widget-wrapper">
+                      <div class="panel-headingx widget-title sectionHeader clearfix">
+                          <span class="pull-left"><i class="fa '.$AwesomeFontsIcon.'"></i> '.$WidgetTitle.'</span>
+                            <div class="widget-controls pull-right">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-default btn-xs panel-hide hide-full glyphicon glyphicon-minus" data-id="'.$WidgetID.'"></a>
+                                </div>     
+                            </div>
+
+                      </div>
+                      <div class="panel-body widget-stage sectionBody">
+                       '.$modx->getChunk(''.$WidgetChunk.'').' 
+                      </div>
+                    </div>           
+                </li>';
 }
 //end chunk
-$output .= $cssOutput.$HtmlOutput;
+$output .= $cssOutput.$WidgetOutput;
 $e->output($output);
 return;
 ?>
