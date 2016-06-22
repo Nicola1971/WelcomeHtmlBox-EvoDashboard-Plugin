@@ -1,4 +1,4 @@
-WelcomeHtmlBox EvoDashboard Plugin 2.3
+WelcomeHtmlBox EvoDashboard Plugin 3.0
 ==========================
 
 Dashboard html box widget plugin for for EvoDashboard and OnManagerWelcomeCustom
